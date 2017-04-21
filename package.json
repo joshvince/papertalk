@@ -4,8 +4,7 @@
   "description": "echo skill to find out your team's football transfer rumours",
   "main": "server.js",
   "scripts": {
-    "test": "mocha test/*",
-    "start": "node server.js"
+    "test": "mocha test/*"
   },
   "repository": {
     "type": "git",
