@@ -4,7 +4,7 @@
   "description": "echo skill to find out your team's football transfer rumours",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/*",
     "start": "node server.js"
   },
   "repository": {
@@ -21,5 +21,9 @@
     "cheerio": "^0.22.0",
     "express": "^4.15.2",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
