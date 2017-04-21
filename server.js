@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('request');
-const scraper = require('./scraper.js');
+const Scraper = require('./src/scraper.js');
 const app     = express();
 
 app.get('/', function(req, response){
@@ -9,7 +9,7 @@ app.get('/', function(req, response){
 
   request(url, function(err, res, html){
     if (!err) {
-      var data = scraper.scrape(html)
+      var data = Scraper.scrape(html)
       response.send(data)
     }
     else {
@@ -21,7 +21,7 @@ app.get('/', function(req, response){
 app.get('/test', function(req, response){
 
   var html = require('./test.js');
-  var data = scraper.scrape(html)
+  var data = Scraper.scrape(html)
   response.send(data)
 })
 
