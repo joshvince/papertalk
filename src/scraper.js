@@ -1,4 +1,15 @@
-const cheerio = require('cheerio')
+const cheerio = require('cheerio');
+const rp = require('request-promise');
+
+function request(url) {
+  return rp(url)
+    .then(function(str){
+    return str
+    })
+    .catch(function(err){
+      console.error(err)
+    })
+}
 
 function scrape(html){
   const $ = cheerio.load(html)
@@ -12,12 +23,10 @@ function scrape(html){
 
   function sanitize(arr) {
     return arr.map(function(str) {
-      return str.trim();
+      return str.trim().replace('&', 'and');
     })
   }
-
   return getStories('.paper-stories')
-
 }
 
-module.exports = {scrape: scrape}
+module.exports = {request: request, scrape: scrape}
