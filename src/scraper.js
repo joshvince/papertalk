@@ -1,6 +1,22 @@
 const cheerio = require('cheerio');
 const rp = require('request-promise');
 
+/*
+  SCRAPER
+  Scrapes a url and gets all list items - returning only the text displayed on the page as a story.
+*/
+
+// Scrape the page at the url, finding all list item text from the given className
+
+function scrape(url, className) {
+  return getHtml(url).then(dataStr => {
+    var stories = getStoryText(dataStr, className)
+    return {stories: stories}
+  })
+}
+
+// Get the HTML string from the url
+
 function getHtml(url) {
   return new Promise((resolve, reject) => {
     rp(url).then(str => {
@@ -30,14 +46,6 @@ function findListItemsText(dataString, className) {
 
 function sanitizeString(str) {
   return str.trim().replace('&', 'and');
-}
-
-function scrape(url, className) {
-  return getHtml(url).then(dataStr => {
-    var stories = getStoryText(dataStr, className)
-    console.log(stories)
-    return {stories: stories}
-  })
 }
 
 module.exports = {

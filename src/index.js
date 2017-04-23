@@ -81,15 +81,3 @@ var languageStrings = {
     } 
   }
 }
-
-/* 
-  Fake stories...
-  DELETE ALL THIS WHEN IT'S PROPERLY HOOKED UP!
-*/
-
-var fakeStories = [
-  "Chelsea won the league on Friday.",
-  "Arsenal Slipped up against West Brom.",
-  "Sunderland were relegated.",
-  "Burnley have failed in their bid to sign Brighton midfielder Dale Stephens."
- ]
