@@ -1,9 +1,10 @@
+/*
+  NAME CHECKER
+  Responsible for finding names of football clubs from arrays of story strings.
+*/
+
 function findNameInString(name, storyString) {
-  var words = storyString.split(" ").map(function(el) {
-    return el.toLowerCase()
-  })
-  var match = (words.indexOf(name.toLowerCase()) != -1)
-  return words.includes(name.toLowerCase())
+  return storyString.toLowerCase().includes(name.toLowerCase())
 }
 
 function findNameFromStories(name, storyArray) {
