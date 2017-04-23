@@ -4,7 +4,9 @@
   "description": "echo skill to find out your team's football transfer rumours",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ../test/*"
+    "test": "mocha ../test/*",
+    "build": "zip -r ../build/release.zip * -x\"*.DS_Store\" -x \"*.log\"",
+    "deploy": "npm run build && aws s3 cp ../build/release.zip s3://football-rumours/build"
   },
   "repository": {
     "type": "git",
