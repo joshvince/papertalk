@@ -1,5 +1,8 @@
 var Alexa = require('alexa-sdk');
 var NameSearch = require('./nameSearch.js');
+var Scraper = require('./scraper.js');
+
+var url = "http://www.skysports.com/football/transfer-paper-talk"
 
 exports.handler = function(event, context, callback){
   var alexa = Alexa.handler(event, context);
@@ -12,9 +15,7 @@ exports.handler = function(event, context, callback){
 var handlers = {
   'LaunchRequest': function () {
     this.attributes['speechOutput'] = this.t("WELCOME_MESSAGE", this.t("SKILL_NAME"));
-    // If the user either does not reply to the welcome message or says something that is not
-    // understood, they will be prompted again with this text.
-    this.attributes['repromptSpeech'] = this.t("WELCOME_MESSAGE");
+    this.attributes['repromptSpeech'] = this.t("WELCOME_MESSAGE", this.t("SKILL_NAME"));
     this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
   },
   'GetRumours': function() {
@@ -26,32 +27,28 @@ var handlers = {
       clubName = clubNameSlot.value.toLowerCase();
     }
     // use the function to match any stories.
-    // TODO!! This should be scraping the web, rather than drawing from a static list of stories...
-    var stories = NameSearch.findNameFromStories(clubName, fakeStories)
-   
-    if (stories.length > 0) {
-      var speechOutput = this.t('FOUND_STORIES_MESSAGE', clubName)
-      var stories = stories.join(" ")
-      this.attributes['speechOutput'] = speechOutput += stories
-      this.emit(':tell', this.attributes['speechOutput'])
-    }
-     // if there were no stories, tell the user...
-    else {
-      var speechOutput = this.t("CLUB_NOT_FOUND_MESSAGE", clubName)
-      this.attributes['speechOutput'] = speechOutput
-      this.emit(':tell', this.attributes['speechOutput'])
-    }
-
+    var stories = [];
+    
+    Scraper.scrape(url, '.paper-stories').then(obj => {
+      stories = NameSearch.findNameFromStories(clubName, obj.stories)
+      if (stories.length > 0) {
+        var speechOutput = this.t('FOUND_STORIES_MESSAGE', clubName)
+        var stories = stories.join(". ")
+        this.attributes['speechOutput'] = speechOutput += stories
+        this.emit(':tell', this.attributes['speechOutput'])
+      }
+      // if there were no stories, tell the user...
+      else {
+        var speechOutput = this.t("CLUB_NOT_FOUND_MESSAGE", clubName)
+        this.attributes['speechOutput'] = speechOutput
+        this.emit(':tell', this.attributes['speechOutput'])
+      }
+    })
   },
   'AMAZON.HelpIntent': function () {
     // The user asked for help - reply with the help message
     this.attributes['speechOutput'] = this.t("HELP_MESSAGE");
-    this.attributes['repromptSpeech'] = this.t("HELP_MESSAGE");
-    this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
-  },
-  'AMAZON.RepeatIntent': function () {
-    // The user wanted the message repeated
-    this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
+    this.emit(':tell', this.attributes['speechOutput'])
   },
   'AMAZON.StopIntent': function () {
     // The user wants to stop the current cycle
@@ -67,7 +64,7 @@ var handlers = {
   },
   'Unhandled': function () {
     this.attributes['speechOutput'] = this.t("HELP_MESSAGE");
-    this.attributes['repromptSpeech'] = this.t("HELP_REPROMPT");
+    this.attributes['repromptSpeech'] = this.t("HELP_MESSAGE");
     this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
   }
 }
