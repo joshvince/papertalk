@@ -1,0 +1,624 @@
+{
+  "clubs": [
+    {
+      "utterance": "accrington stanley",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "alfreton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "altrincham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "arsenal",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "aston villa",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "barnet",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "barnsley",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "barrow",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "birmingham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "blackburn",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "blackpool",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "bolton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "boreham wood",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "bournemouth",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "brackley",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "bradford",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "braintree",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "brentford",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "brighton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "bristol city",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "bristol rovers",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "burnley",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "burton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "bury",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "cambridge",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "cardiff",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "carlisle",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "charlton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "chelsea",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "cheltenham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "chesham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "chesterfield",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "colchester",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "coventry",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "crawley",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "crewe",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "crystal palace",
+      "hasNickname": true,
+      "nicknames": ["crystal palace", "palace"]
+    },
+    {
+      "utterance": "curzon ashton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "dagenham and redbridge",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "dartford",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "derby",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "doncaster",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "dover",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "eastbourne",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "eastleigh",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "everton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "exeter",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "fleetwood",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "fulham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "gillingham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "grimsby",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "halifax",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "harrow",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "hartlepool",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "huddersfield",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "hull",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "ipswich",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "kidderminster",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "leeds",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "leicester",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "leyton orient",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "lincoln",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "liverpool",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "luton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "macclesfield",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "maidstone",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "manchester city",
+      "hasNickname": true,
+      "nicknames": ["man city", "manchester city"]
+    },
+    {
+      "utterance": "manchester united",
+      "hasNickname": true,
+      "nicknames": ["man united", "man utd", "manchester utd", "manchester united"]
+    },
+    {
+      "utterance": "mansfield",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "merstham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "middlesbrough",
+      "hasNickname": true,
+      "nicknames": ["boro", "middlesbrough"]
+    },
+    {
+      "utterance": "millwall",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "mk dons",
+      "hasNickname": true,
+      "nicknames": ["milton keynes dons", "mk dons"]
+    },
+    {
+      "utterance": "morecambe",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "newcastle",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "newport",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "northampton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "norwich",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "nottingham forest",
+      "hasNickname": true,
+      "nicknames": ["forest", "nottingham forest"]
+    },
+    {
+      "utterance": "notts county",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "oldham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "oxford",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "peterborough",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "plymouth",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "port vale",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "portsmouth",
+      "hasNickname": true,
+      "nicknames": ["pompey", "portsmouth"]
+    },
+    {
+      "utterance": "preston",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "queens park rangers",
+      "hasNickname": true,
+      "nicknames": ["qpr", "queens park rangers"]
+    },
+    {
+      "utterance": "reading",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "rochdale",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "rotherham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "scunthorpe",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "sheffield united",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "sheffield wednesday",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "shrewsbury",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "solihull moors",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "southampton",
+      "hasNickname": true,
+      "nicknames": ["saints", "southampton"]
+    },
+    {
+      "utterance": "southend",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "southport",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "spennymoor",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "st albans",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "stamford",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "stevenage",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "stockport",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "stoke",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "stourbridge",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "sunderland",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "sutton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "swansea",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "swindon",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "taunton",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "tottenham",
+      "hasNickname": true,
+      "nicknames": ["spurs", "tottenham"]
+    },
+    {
+      "utterance": "walsall",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "watford",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "west brom",
+      "hasNickname": true,
+      "nicknames": ["west bromwich albion", "west brom"]
+    },
+    {
+      "utterance": "west ham",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "westfields",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "whitehawk",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "wigan",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "wimbledon",
+      "hasNickname": true,
+      "nicknames": ["afc wimbledon", "wimbledon"]
+    },
+    {
+      "utterance": "woking",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "wolves",
+      "hasNickname": true,
+      "nicknames": ["wolverhampton wanderers", "wolves"]
+    },
+    {
+      "utterance": "wycombe",
+      "hasNickname": false,
+      "nicknames": []
+    },
+    {
+      "utterance": "yeovil",
+      "hasNickname": false,
+      "nicknames": []
+    }
+  ]
+}
