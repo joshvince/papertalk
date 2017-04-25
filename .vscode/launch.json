@@ -24,7 +24,7 @@
       "type": "node",
       "request": "launch",
       "name": "Skill Test",
-      "program": "${workspaceRoot}/test/skillTest/main.js"
+      "program": "${workspaceRoot}/test/skillTest/test.js"
     },
     {
       "type": "node",
