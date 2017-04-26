@@ -13,10 +13,12 @@ exports.handler = function(event, context, callback){
 };
 
 var handlers = {
+  'LaunchIntent': function () {
+    this.emit('LaunchRequest')
+  },
   'LaunchRequest': function () {
     this.attributes['speechOutput'] = this.t("WELCOME_MESSAGE", this.t("SKILL_NAME"));
-    this.attributes['repromptSpeech'] = this.t("WELCOME_MESSAGE", this.t("SKILL_NAME"));
-    this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
+    this.emit(':tell', this.attributes['speechOutput'])    
   },
   'GetRumours': function() {
     // get the name supplied by the user in the intent request
@@ -64,8 +66,7 @@ var handlers = {
   },
   'Unhandled': function () {
     this.attributes['speechOutput'] = this.t("HELP_MESSAGE");
-    this.attributes['repromptSpeech'] = this.t("HELP_MESSAGE");
-    this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
+    this.emit(':tell', this.attributes['speechOutput'])
   }
 }
 
@@ -73,8 +74,8 @@ var languageStrings = {
   "en": {
     "translation": {
       "SKILL_NAME": "Football Rumours",
-      "WELCOME_MESSAGE": "Welcome to %s. You can ask for stories in today's papers about a particular football club.",
-      "HELP_MESSAGE": "You can ask for stories in today's papers about a particular football club.",
+      "WELCOME_MESSAGE": "Welcome to %s. You can ask me for stories in today's papers about a particular football club.",
+      "HELP_MESSAGE": "You can ask for stories in today's papers about any English League football club.",
       "FOUND_STORIES_MESSAGE": "I found the following stories for %s: ",
       "CLUB_NOT_FOUND_MESSAGE": "Looks like there are no stories about %s today.",
       "STOP_MESSAGE": "Goodbye!"
