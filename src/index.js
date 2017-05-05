@@ -1,6 +1,6 @@
 var Alexa = require('alexa-sdk');
 var NameSearch = require('./nameSearch.js');
-var Scraper = require('./scraper.js');
+var Dispatcher = require('./dispatcher.js');
 
 var url = "http://www.skysports.com/football/transfer-paper-talk"
 
@@ -30,16 +30,17 @@ var handlers = {
     }
     // use the function to match any stories.
     var stories = [];
-    
-    Scraper.scrape(url, '.paper-stories').then(obj => {
-      stories = NameSearch.findNameFromStories(clubName, obj.stories)
+    // Dispatcher will handle the logic of fetching from the DB or updating it for us...
+    Dispatcher.dispatch("national").then(res => {
+      // Find our club from the array of stories returned by the Dispatcher.
+      stories = NameSearch.findNameFromStories(clubName, res)
+      // if there are some matches, add this to the output and tell the user
       if (stories.length > 0) {
         var speechOutput = this.t('FOUND_STORIES_MESSAGE', clubName)
-        var stories = stories.join(". ")
         this.attributes['speechOutput'] = speechOutput += stories
         this.emit(':tell', this.attributes['speechOutput'])
       }
-      // if there were no stories, tell the user...
+      // if there were no stories that matches, tell the user...
       else {
         var speechOutput = this.t("CLUB_NOT_FOUND_MESSAGE", clubName)
         this.attributes['speechOutput'] = speechOutput
