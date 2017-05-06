@@ -35,3 +35,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# The Skill Test file, which changes depending on which skill you're testing
+test/skillTest/test.js
