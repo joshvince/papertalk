@@ -1,6 +1,6 @@
 var Alexa = require('alexa-sdk');
-var NameSearch = require('./nameSearch.js');
-var Dispatcher = require('./dispatcher.js');
+var NameSearch = require('./src/nameSearch.js');
+var Dispatcher = require('./src/dispatcher.js');
 
 var url = "http://www.skysports.com/football/transfer-paper-talk"
 
