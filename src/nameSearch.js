@@ -4,7 +4,7 @@
 */
 var fs = require('fs');
 
-var clubNames = fs.readFileSync('clubNames/clubNames.json');
+var clubNames = fs.readFileSync(__dirname + '/clubNames/clubNames.json');
 clubNames = JSON.parse(clubNames);
 
 function findClubNameInString(club, storyString) {

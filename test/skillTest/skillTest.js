@@ -67,7 +67,7 @@ function testFile(pathToEventFile){
             return originalRequire.apply(this, arguments);
           }
         };        
-        var lambda = require('../../src/index.js');
+        var lambda = require('../../index.js');
         var event = require(filePath);
         lambda.handler(event, context(filePath));
       }
