@@ -3,9 +3,11 @@ var NameSearch = require('./src/nameSearch.js');
 var Dispatcher = require('./src/dispatcher.js');
 
 var url = "http://www.skysports.com/football/transfer-paper-talk"
+var APP_ID = "amzn1.ask.skill.9203930a-9497-4ebf-94c5-1ab0b3ddaa46"
 
 exports.handler = function(event, context, callback){
   var alexa = Alexa.handler(event, context);
+  alexa.appId = APP_ID;
   // To enable string internationalization (i18n) features, set a resources object.
   alexa.resources = languageStrings;
   alexa.registerHandlers(handlers);
