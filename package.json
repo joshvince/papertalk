@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha test/*",
     "build": "zip -r ./build/release.zip * -x\"*.DS_Store\" -x \"*.log\"",
-    "deploy": "npm run build && aws s3 cp ./build/release.zip s3://football-rumours/build/"
+    "deploy": "npm run build && aws s3api put-object --bucket football-rumours --key build/release.zip --body build/release.zip "
   },
   "repository": {
     "type": "git",

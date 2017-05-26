@@ -4,4 +4,5 @@ var SkillTest = require('./skillTest.js');
 
 // SkillTest.testFile('./getRumoursRequest.json');
 // SkillTest.testFile('./helpRequest.json');
-SkillTest.testFile('./launchRequest.json');
+SkillTest.testFile('./unhandledRequest.json');
+// SkillTest.testFile('./launchRequest.json');
