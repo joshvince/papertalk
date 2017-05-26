@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*",
+    "skillTest": "node test/skillTest/test.js",
     "build": "zip -r ./build/release.zip * -x\"*.DS_Store\" -x \"*.log\"",
     "deploy": "npm run build && aws s3api put-object --bucket football-rumours --key build/release.zip --body build/release.zip "
   },
