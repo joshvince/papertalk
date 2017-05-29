@@ -20,35 +20,41 @@ var handlers = {
   },
   'LaunchRequest': function () {
     this.attributes['speechOutput'] = this.t("WELCOME_MESSAGE", this.t("SKILL_NAME"));
-    this.emit(':tell', this.attributes['speechOutput'])    
+    this.emit(':ask', this.attributes['speechOutput'])    
   },
   'GetRumours': function() {
     // get the name supplied by the user in the intent request
     var clubNameSlot = this.event.request.intent.slots.ClubName;
     var clubName;
-    // assign it to the variable, if it exists...
-    if (clubNameSlot && clubNameSlot.value) {
-      clubName = clubNameSlot.value.toLowerCase();
+    // tell the user that there is no club with no name...
+    if (clubNameSlot.value == ""){
+      var speechOutput = this.t('NO_CLUB_GIVEN_MESSAGE');
+      this.attributes['speechOutput'] = speechOutput;
+      this.emit(':tell', this.attributes['speechOutput'])
     }
+    else {
+    // assign it to the variable, if it exists...
+      clubName = clubNameSlot.value.toLowerCase();
     // use the function to match any stories.
-    var stories = [];
+      var stories = [];
     // Dispatcher will handle the logic of fetching from the DB or updating it for us...
-    Dispatcher.dispatch("national").then(res => {
-      // Find our club from the array of stories returned by the Dispatcher.
-      stories = NameSearch.findNameFromStories(clubName, res)
-      // if there are some matches, add this to the output and tell the user
-      if (stories.length > 0) {
-        var speechOutput = this.t('FOUND_STORIES_MESSAGE', clubName)
-        this.attributes['speechOutput'] = speechOutput += stories
-        this.emit(':tell', this.attributes['speechOutput'])
-      }
-      // if there were no stories that matches, tell the user...
-      else {
-        var speechOutput = this.t("CLUB_NOT_FOUND_MESSAGE", clubName)
-        this.attributes['speechOutput'] = speechOutput
-        this.emit(':tell', this.attributes['speechOutput'])
-      }
-    })
+      Dispatcher.dispatch("national").then(res => {
+    // Find our club from the array of stories returned by the Dispatcher.
+        stories = NameSearch.findNameFromStories(clubName, res)
+    // if there are some matches, add this to the output and tell the user
+        if (stories.length > 0) {
+          var speechOutput = this.t('FOUND_STORIES_MESSAGE', clubName)
+          this.attributes['speechOutput'] = speechOutput += stories
+          this.emit(':tell', this.attributes['speechOutput'])
+        }
+    // if there were no stories that matches, tell the user...
+        else {
+          var speechOutput = this.t("CLUB_NOT_FOUND_MESSAGE", clubName)
+          this.attributes['speechOutput'] = speechOutput
+          this.emit(':tell', this.attributes['speechOutput'])
+        }
+      })
+    }
   },
   'AMAZON.HelpIntent': function () {
     // The user asked for help - reply with the help message
@@ -81,6 +87,7 @@ var languageStrings = {
       "HELP_MESSAGE": "You can ask for stories in today's papers about any English League football club.",
       "FOUND_STORIES_MESSAGE": "I found the following stories for %s: ",
       "CLUB_NOT_FOUND_MESSAGE": "Looks like there are no stories about %s today.",
+      "NO_CLUB_GIVEN_MESSAGE": "You need to supply a club to search by. Try asking again",
       "STOP_MESSAGE": "Goodbye!"
     } 
   }
