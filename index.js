@@ -27,9 +27,10 @@ var handlers = {
     var clubNameSlot = this.event.request.intent.slots.ClubName;
     var clubName;
     // tell the user that there is no club with no name...
-    if (!clubNameSlot.value.length){
+    if (clubNameSlot.value == ""){
       var speechOutput = this.t('NO_CLUB_GIVEN_MESSAGE');
-      this.emit(':tell', this.attributes['speechOutput']);
+      this.attributes['speechOutput'] = speechOutput;
+      this.emit(':tell', this.attributes['speechOutput'])
     }
     else {
     // assign it to the variable, if it exists...
