@@ -56,8 +56,8 @@ function fetchFromCache(type, dbTableName){
 
 // check whether the cache contains a record from the same day
 function isFromToday(storiesObject) {
-  var today = new Date().getDay()
-  var cacheDay = new Date(storiesObject.date).getDay();
+  var today = new Date().getDate()
+  var cacheDay = new Date(storiesObject.date).getDate();
   return cacheDay === today
 }
 
@@ -80,3 +80,4 @@ module.exports = {
   dispatch: dispatch
 }
 
+dispatch("national");
